@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    background-color: hsl(185, 41%, 84%);
+}
+
+h1 {
+    color: hsl(172, 67%, 45%)
+}
+
+.name {
+    color: hsl(186, 14%, 43%);
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.split:nth-child(1) {
+    margin-bottom: 0;
+}
+
+.split:nth-child(2) {
+    margin-top: .35rem;
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: 3rem;
+}
+
+h4 {
+    color: hsl(186, 14%, 43%);
+}
+
+.bill-area h4{
+    margin-bottom: 0.5rem;
+}
+
+#bill, #people {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .75rem;
+    border-radius: .65rem;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    margin-top: 0;
+    text-align: right;
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: left, center;
+    background-position-x: 5%;
+    font-family: 'Space Mono', monospace;
+}
+
+#bill:hover, #people:hover, #custom:hover, #manual:hover {
+    border: 3px solid hsl(172, 67%, 45%);
+}
+
+.tip-rates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.rate {
+    border-radius: .45rem;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: .75rem;
+    width: 48%;
+    margin-bottom: .75rem;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+}
+
+.rate:hover {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    transition: all 0.25s ease-in-out;
+}
+
+.rate:nth-child(6) {
+    color: hsl(186, 14%, 43%);
+    background-color: hsl(189, 41%, 97%);
+}
+
+.people h4{
+    margin-bottom: 0.5rem;
+}
+
+#people {
+    background-image: url("./images/icon-person.svg");
+}
+
+.amounts {
+    background-color: hsl(183, 100%, 15%);
+    padding: 1rem;
+    border-radius: .65rem;
+    margin-top: 3rem;
+}
+
+.amounts h4 {
+    color: white;
+    margin-bottom: 0;
+}
+
+.amounts p {
+    color: hsl(186, 14%, 43%);
+    margin-top: 0.25rem;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.reset {
+    width: 100%;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+.individual, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    margin-bottom: .5rem;
+    display: none;
+}
+
+.show-error {
+    display: block;
+}
+
+.manual {
+    display: none;
+    width: 48%;
+    box-sizing: border-box;
+    padding: .75rem;
+    border-radius: .65rem;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    margin-top: 0;
+    text-align: right;
+}
+
+#custom:hover {
+    color: hsl(183, 100%, 15%);
+    border: 3px solid hsl(172, 67%, 45%);
+}
+
+@media (min-width:650px) {
+    .container {
+        width: 75%;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+
+    main {
+        margin-top: 1.5rem;
+        border-radius: 2.5rem;
+    }
+}
+
+@media (min-width:950px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 65%;
+        max-width: 1440px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .inputs, .outputs {
+        width: 47%;
+    }
+
+    .individual {
+        margin-bottom: 1.5rem;
+    }
+
+    .total {
+        margin-bottom: 4.5rem;
+    }
+
+    .rate {
+        font-size: 20px;
+        font-weight: bold;
+        padding: .55rem;
+        width: 48%;
+        margin-bottom: .75rem;
+    }
+
+    #bill, #people {
+        padding: .55rem;
+        font-size: 20px;
+    }
+
+    .split:nth-child(1) {
+        margin-bottom: 0;
+    }
+    
+    .split:nth-child(2) {
+        margin-top: .25rem;
+    }
+}
