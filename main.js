@@ -95,7 +95,7 @@ custom.addEventListener("click", () => {
 })
 
 manual.addEventListener("input", () => {
-    let tip = (Number(manual.value)/100) * Number(bill.value)
+    let tip = (Number(manual.value)/100) * (Number(bill.value)/2)
     tipAmount.innerHTML = `<h1>$${tip.toFixed(2)}</h1>`
     let totalBill = Number(bill.value) / Number(people.value) + tip
     total.innerHTML = `<h1>$${totalBill.toFixed(2)}</h1>`
